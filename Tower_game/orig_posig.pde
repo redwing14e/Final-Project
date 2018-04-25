@@ -1,5 +1,5 @@
 void origin(){
-  charX = width/2;
-  charY = groundY - charSize;
+  charX = groundLength/2;
+  charY = - charSize;
   ySpeed = 0;
 }

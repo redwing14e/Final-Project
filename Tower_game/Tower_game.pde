@@ -1,27 +1,21 @@
-//////Eric is a scrub
 float charX;
 float charY;
-
 float gravity = 1.3;
 float ySpeed = 0;
 boolean jump = false;
-float groundX = 0;
-float groundY;
-float groundWidth;
-float groundHeight;
+float groundLength = 10000;
 float xSpeed = 10;
 float charSize = 10;
-
-
+float startX;
+float finishX;
+float startY; 
+float finishY;
 
 
 void setup() {
   size(800, 800);
-  groundY = height/2 + charSize;
-  groundWidth = width;
-  groundHeight = height;
-  charX = width/ 2;
-  charY = groundY - charSize;
+  charX = groundLength/2;
+  charY = -charSize;
 }
 
 
@@ -31,12 +25,15 @@ void draw() {
   fill(200);
   rectMode(CORNER);
   rect(charX, charY, charSize, charSize);
-  platforms();
   keyControl();
+  platforms();
 
   if (jump) {
-    // println("in jump");
     charY += ySpeed;
     ySpeed += gravity;
+    if(ySpeed > -1 && ySpeed < 1){
+      finishY = charY;
+      println("y distance of jump: ", abs(finishY - startY));
+    }
   }
 }
