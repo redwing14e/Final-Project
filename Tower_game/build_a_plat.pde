@@ -20,6 +20,7 @@ void plat(float x, float y, float leg, float hi, color c) {
           ySpeed = 0;
         } else {
           charY = y + hi;
+          ySpeed = 0;
         }
       }
     } else {
