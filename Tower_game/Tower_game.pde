@@ -1,4 +1,4 @@
-//////
+//////Eric is a scrub
 float charX;
 float charY;
 
