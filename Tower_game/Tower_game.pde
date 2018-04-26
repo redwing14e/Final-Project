@@ -1,6 +1,5 @@
 float charX;
 float charY;
-float gravity = 1.3;
 float ySpeed = 0;
 boolean jump = false;
 float groundLength = 10000;
@@ -10,6 +9,7 @@ float startX;
 float finishX;
 float startY; 
 float finishY;
+
 
 
 void setup() {
@@ -27,7 +27,9 @@ void draw() {
   rect(charX, charY, charSize, charSize);
   keyControl();
   platforms();
-
+  
+  
+  float gravity = 1.1;
   if (jump) {
     charY += ySpeed;
     ySpeed += gravity;

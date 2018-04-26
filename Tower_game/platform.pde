@@ -11,9 +11,9 @@ void platforms() {
 
   float platTempX = groundCenter - 500;
   float platTempY = - 20;
-  for (int i = 0; i < 10; i ++) {
+  for (int i = 0; i < 5; i ++) {
     plat(platTempX, platTempY, 100, 20, color(0));
-    platTempY -= 100;
-    platTempX += 100;
+    platTempY -= 130;
+   // platTempX += 100;
   }
 }
