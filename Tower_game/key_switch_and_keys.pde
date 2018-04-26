@@ -1,5 +1,5 @@
 
-boolean[] keys = {false, false, false};
+boolean[] keys = {false, false, false, false};
 
 void keyPressed() {
   if (key == 'd' || key == 'D') {
@@ -13,6 +13,10 @@ void keyPressed() {
   if (key == 'w' || key == 'W') {
     keys[2] = true;
   }
+
+  if (key == 's' || key == 'S') {
+    keys[3] = true;
+  }
 }
 void keyReleased() {
   if (key == 'd' || key == 'D') {
@@ -24,10 +28,14 @@ void keyReleased() {
   if (key == 'w' || key == 'W') {
     keys[2] = false;
   }
+
+  if (key == 's' || key == 'S') {
+    keys[3] = false;
+  }
 }
 
-void keyControl(){
-    //jumps player on key command 
+void keyControl() {
+  //jumps player on key command 
   if (keyPressed) {
     if (keys[1]) {
       charX -= xSpeed;
@@ -35,22 +43,26 @@ void keyControl(){
       charX += xSpeed;
     }
   }
- if (!jump) {
-   ySpeed = 0;
-   if(keyPressed){
-      if(keys[2]) {
-        ySpeed = -20;
+  if (!jump) {
+    ySpeed = 0;
+    if (keyPressed) {
+      if (keys[2]) {
+        ySpeed = -25;
         //sets jump to true so player can not jump within their jump
         jump = true;
         startX = charX;
         startY = charY;
       }
-   }
- }
+      if (keys[3]) {
+        charY += 25;
+        ySpeed = 0;
+        jump = true;
+      }
+    }
+  }
   if (keyPressed) {
     if (key == 'r' || key == 'R') {
       origin();
     }
   }
-
 }
