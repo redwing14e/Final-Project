@@ -1,3 +1,4 @@
+//this is the game screen
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
