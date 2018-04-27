@@ -1,3 +1,4 @@
+//hello m8
 boolean game = true;
 boolean menu = false;
 boolean startup = false;
