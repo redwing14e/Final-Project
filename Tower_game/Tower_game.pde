@@ -1,7 +1,10 @@
 
+
+
 boolean game = true;
+
 boolean menu = false;
-boolean startup = false;
+boolean startup = true;
 boolean death = false;
 boolean win = false;
 
@@ -10,7 +13,9 @@ void setup() {
 }
 
 void draw() {
-  if(game){
+  if(startup){
+    startUp();
+  }else if(game){
     gameScreen();
   }
 
