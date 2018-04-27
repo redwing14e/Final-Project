@@ -1,5 +1,5 @@
 void plat(float x, float y, float leg, float hi, color c) {
-
+  stroke(0);
   fill(c);
   rectMode(CORNER);
   rect(x, y, leg, hi);
@@ -19,7 +19,7 @@ void plat(float x, float y, float leg, float hi, color c) {
           charY = y - charSize;
           ySpeed = 0;
           finishX = charX;
-          //println("x distance of jump: ", finishX - startX);
+          println("x distance of jump: ", finishX - startX);
         } else {
           charY = y + hi;
           ySpeed = 0;

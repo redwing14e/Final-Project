@@ -1,4 +1,4 @@
-//this is the game screen
+
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -15,11 +15,18 @@ float charY =  -charSize;
 void gameScreen(){ 
   background(255);
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
+  hazards();
   fill(200);
+  stroke(0);
   rectMode(CORNER);
   rect(charX, charY, charSize, charSize);
   keyControl();
   platforms();
+  
+
+
+  
+  
 
   
   
@@ -31,10 +38,10 @@ void gameScreen(){
     } else {
       ySpeed = 25;
     }
-    println(ySpeed);
+    
     if(ySpeed > -1 && ySpeed < 1){
       finishY = charY;
-      //println("y distance of jump: ", abs(finishY - startY));
+      println("y distance of jump: ", abs(finishY - startY));
     }
   }
 }
