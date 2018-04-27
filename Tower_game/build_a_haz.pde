@@ -4,7 +4,7 @@ void haz(float x,float y, float leg,float hi){
   rectMode(CORNER);
   rect(x, y, leg, hi);
   
-  if(charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi) {
+  if(charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi) {   
     origin();
   }
   
