@@ -1,7 +1,7 @@
 
 
 
-boolean game = true;
+boolean game = false;
 
 boolean menu = false;
 boolean startup = true;
