@@ -22,8 +22,9 @@ void gameScreen(){
   rect(charX, charY, charSize, charSize);
   keyControl();
   jumpFall();
-  hazards();
   platforms();
+  hazards();
+
 
 
 

@@ -9,7 +9,7 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
- size(800, 800);
+ fullScreen();
 }
 
 void draw() {
