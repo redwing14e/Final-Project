@@ -17,13 +17,5 @@ void startUp(){
   }else{
     fill(255,0,0);
   }
-  
-  
-  
-  
-  
-  
-  
-  
   rect(towerXpos, towerYpos, towerWid, towerHit);
 }
