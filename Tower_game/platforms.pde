@@ -13,7 +13,7 @@ void platforms() {
   float platTempY = - 25;
   for (int i = 0; i < 10; i ++) {
     plat(platTempX, platTempY, 100, 25, color(0));
-    platTempY -= 130;
+    platTempY -= 260;
    // platTempX += 100;
   }
 }

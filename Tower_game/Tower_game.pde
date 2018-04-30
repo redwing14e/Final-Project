@@ -1,8 +1,5 @@
-//
-
 
 boolean game = false;
-
 boolean menu = false;
 boolean startup = true;
 boolean death = false;
