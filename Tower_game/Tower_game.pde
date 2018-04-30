@@ -16,5 +16,7 @@ void draw() {
     startUp();
   } else if (game) {
     gameScreen();
+  }else if(death){
+    ds();
   }
 }

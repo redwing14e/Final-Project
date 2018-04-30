@@ -6,6 +6,8 @@ void haz(float x,float y, float leg,float hi){
   
   if(charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi) {   
     origin();
+    death = true;
+    game = false;
   }
   
 }
