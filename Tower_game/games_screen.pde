@@ -1,4 +1,4 @@
-
+PImage back;
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -13,7 +13,8 @@ float charY =  -charSize;
 
 
 void gameScreen(){ 
-  background(255);
+
+  image(back, 0, 0, width, height);
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
 
   fill(200);

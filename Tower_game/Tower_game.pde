@@ -6,18 +6,15 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
-
-
- //size(800, 800);
-
- fullScreen();
+  back = loadImage("landscape.png");
+  back.resize(width, height);
+  fullScreen();
 }
 
 void draw() {
-  if(startup){
+  if (startup) {
     startUp();
-  }else if(game){
+  } else if (game) {
     gameScreen();
   }
-
 }
