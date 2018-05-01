@@ -7,8 +7,10 @@ boolean win = false;
 
 void setup() {
   back = loadImage("landscape.png");
+  platImage = loadImage("bricks.png");
   back.resize(width, height);
-  fullScreen();
+  platImage.resize(100, 100);
+  fullScreen(P2D);
 }
 
 void draw() {

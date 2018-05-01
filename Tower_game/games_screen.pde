@@ -1,4 +1,5 @@
 PImage back;
+PImage platImage;
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -8,15 +9,20 @@ float startX;
 float finishX;
 float startY; 
 float finishY;
-float charX = groundLength/2;
+float charX = 0;
 float charY =  -charSize;
 
 
 void gameScreen(){ 
-
-  image(back, 0, 0, width, height);
+  background(back);
+  
+  for(float landX = charX -groundLength/2; landX < groundLength/2; landX += width){
+    image(back, -landX, 0,width, height);
+  }
+  
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
-
+  
+  
   fill(200);
   stroke(0);
   rectMode(CORNER);

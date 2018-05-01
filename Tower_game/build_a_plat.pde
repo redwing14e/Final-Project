@@ -1,8 +1,18 @@
 void plat(float x, float y, float leg, float hi, color c) {
   stroke(0);
-  fill(c);
+  //fill(c);
   rectMode(CORNER);
-  rect(x, y, leg, hi);
+  textureMode(IMAGE);
+  textureWrap(REPEAT);
+  beginShape(); 
+  texture(platImage);
+  vertex(x, y, 0, 0);
+  vertex(x + leg, y, leg, 0);
+  vertex(x + leg, y + hi, leg, hi);
+  vertex(x, y + hi, 0, hi);
+  endShape();
+  
+
 
   if (charY > y - (charSize + 1) && charY < y + hi) {
     if (charY > y && charY < y + hi) {

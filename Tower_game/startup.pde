@@ -3,7 +3,8 @@ void startUp(){
   float towerYpos = height/4;
   float towerWid = width/8;
   float towerHit = height/2;
-  background(150,250,255);
+  fill(150,250,255);
+  rect(0, 0, width, height);
   
   
   if(mouseX>towerXpos && mouseX<towerXpos+ towerWid && mouseY>towerYpos && mouseY<towerYpos+ towerHit){
