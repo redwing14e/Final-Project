@@ -1,6 +1,6 @@
 void ds(){
   
-  fill(50,250,200);
+  fill(200,250,50, 15);
   rect(0, 0, width, height);
   if(keyPressed){
     if (key == 'f' || key == 'F'){
