@@ -14,10 +14,10 @@ float charY =  -charSize;
 
 
 void gameScreen(){ 
-  background(back);
+
   
   for(float landX = charX -groundLength/2; landX < groundLength/2; landX += width){
-    image(back, -landX, 0,width, height);
+    image(back, -landX, 0, width, height);
   }
   
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));

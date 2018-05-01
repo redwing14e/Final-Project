@@ -1,4 +1,4 @@
-void plat(float x, float y, float leg, float hi, color c) {
+void plat(float x, float y, float leg, float hi) {
   stroke(0);
   //fill(c);
   rectMode(CORNER);
