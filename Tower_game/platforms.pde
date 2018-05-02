@@ -4,8 +4,8 @@ void platforms() {
 
 
   float platTempX = -120;
-  float platTempY = -155;
-  for (int i = 0; i < 10; i ++) {
+  float platTempY = -120;
+  for (int i = 0; i < 11; i ++) {
     plat(platTempX, platTempY, 100, 25);
     platTempY -= 260;
    // platTempX += 100;

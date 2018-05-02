@@ -13,7 +13,7 @@ void ds() {
       a=0;
     }
   }
-  if (a>=240) {
+  if (a>=100) {
     fill(255);
     text("Press 'f' to Pay Respect", width/2, 3*height/4);
   }
