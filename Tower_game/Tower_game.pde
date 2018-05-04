@@ -6,10 +6,12 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
-  back = loadImage("landscape.png");
+  back = loadImage("back.png");
   platImage = loadImage("bricks.png");
-  back.resize(width, 2 * height);
+  back.resize(width/2, height);
   platImage.resize(200, 200);
+  barbs = loadImage("barbwire.png");
+  barbs.resize(50, 50);
   fullScreen(P2D);
 }
 

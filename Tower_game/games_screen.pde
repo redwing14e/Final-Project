@@ -1,5 +1,6 @@
 PImage back;
 PImage platImage;
+PImage barbs;
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -13,16 +14,18 @@ float charX = 0;
 float charY =  -charSize;
 
 
-void gameScreen(){ 
+void gameScreen() { 
 
-  
-  for(float landX = charX -groundLength/2; landX < groundLength/2; landX += width){
-    image(back, -landX, 0, width, height);
+
+  for (float landX = charX -groundLength/2; landX < groundLength/2; landX += width/2) {
+    for (float landY = 0; landY < height; landY += height/2) {
+      image(back, -landX, landY, width/2, height/2);
+    }
   }
-  
+
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
-  
-  
+
+
   fill(200);
   stroke(0);
   rectMode(CORNER);
@@ -31,9 +34,4 @@ void gameScreen(){
   jumpFall();
   platforms();
   hazards();
-
-
-
-
- 
 }
