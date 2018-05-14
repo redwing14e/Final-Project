@@ -7,8 +7,8 @@ void haz(float x,float y, float leg,float hi){
   texture(barbs);
   vertex(x, y, 0, 0);
   vertex(x + leg, y, leg, 0);
-  vertex(x + leg, y + hi, leg, hi);
-  vertex(x, y + hi, 0, hi);
+  vertex(x + leg, y + hi, leg, 50);
+  vertex(x, y + hi, 0, 50);
   endShape();
   
   if(charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi) {   

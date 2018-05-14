@@ -1,6 +1,7 @@
 PImage back;
 PImage platImage;
 PImage barbs;
+PImage landscape;
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -12,18 +13,29 @@ float startY;
 float finishY;
 float charX = 0;
 float charY =  -charSize;
+float wallsPos = 1200;
 
 
 void gameScreen() { 
 
-
-  for (float landX = charX -groundLength/2; landX < groundLength/2; landX += width/2) {
-    for (float landY = 0; landY < height; landY += height/2) {
-      image(back, -landX, landY, width/2, height/2);
-    }
+  for (float landX = -groundLength/2; landX < groundLength/2; landX += width) {
+    image(landscape, -landX, 0);
   }
 
+
+
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
+  
+  textureMode(IMAGE);
+  textureWrap(REPEAT);
+  beginShape();
+  texture(back);
+  vertex(-wallsPos, -10000, 0, 0);
+  vertex(wallsPos, -10000, 2*wallsPos, 0);
+  vertex(wallsPos, 0, 2*wallsPos, -10000);
+  vertex(-wallsPos, 0, 0, -10000);
+  endShape();
+
 
 
   fill(200);

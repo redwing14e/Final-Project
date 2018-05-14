@@ -1,7 +1,5 @@
 void plat(float x, float y, float leg, float hi) {
   stroke(0);
-  //fill(c);
-  rectMode(CORNER);
   textureMode(IMAGE);
   textureWrap(REPEAT);
   beginShape(); 

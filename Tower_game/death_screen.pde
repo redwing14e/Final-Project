@@ -1,10 +1,13 @@
-
 float a = 0;
+
+PFont medGothic;
+
+
 void ds() {
-  textSize(40);
+  textFont(medGothic);
   textAlign(CENTER, CENTER);
   fill(50, a);
-  a += 2;
+  a += 3;
   rect(0, 0, width, height);
   if (keyPressed) {
     if (key == 'f' || key == 'F') {
