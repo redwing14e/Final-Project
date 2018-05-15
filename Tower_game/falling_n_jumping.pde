@@ -1,5 +1,5 @@
 void jumpFall(){
-  float gravity = 1.1;
+  float gravity = 2.2;
   if (jump) {
     charY += ySpeed;
     if(ySpeed < 25){
@@ -7,10 +7,6 @@ void jumpFall(){
     } else {
       ySpeed = 25;
     }
-    
-    if(ySpeed > -1 && ySpeed < 1){
-      finishY = charY;
-      println("y distance of jump: ", abs(finishY - startY));
-    }
+
   }
 }

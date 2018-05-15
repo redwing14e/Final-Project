@@ -47,11 +47,9 @@ void keyControl() {
     ySpeed = 0;
     if (keyPressed) {
       if (keys[2]) {
-        ySpeed = -25;
+        ySpeed = -35;
         //sets jump to true so player can not jump within their jump
         jump = true;
-        startX = charX;
-        startY = charY;
       }
       if (keys[3]) {
         charY += 25;

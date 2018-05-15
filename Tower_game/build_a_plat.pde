@@ -26,8 +26,6 @@ void plat(float x, float y, float leg, float hi) {
           jump = false;
           charY = y - charSize;
           ySpeed = 0;
-          finishX = charX;
-          println("x distance of jump: ", finishX - startX);
         } else {
           charY = y + hi;
           ySpeed = 0;

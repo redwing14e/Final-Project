@@ -6,11 +6,12 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
+  frameRate(30);
   back = loadImage("back.png");
   back.resize( 1200, 900);
 
   landscape =loadImage("landscape.png");
-  landscape.resize(width, height);
+  landscape.resize(width, floor(height * 1.3));
 
   platImage = loadImage("bricks.png");
   platImage.resize(200, 200);
@@ -26,6 +27,7 @@ void setup() {
 }
 
 void draw() {
+  println(frameRate);
   if (startup) {
    cursor();
     startUp();
