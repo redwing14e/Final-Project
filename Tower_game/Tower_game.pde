@@ -27,8 +27,10 @@ void setup() {
 
 void draw() {
   if (startup) {
+   cursor();
     startUp();
   } else if (game) {
+    noCursor();
     gameScreen();
   } else if (death) {
     ds();
