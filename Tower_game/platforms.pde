@@ -4,9 +4,10 @@ void platforms() {
   
   
   //wals
+  
   plat(-wallsPos, -10000, 200, 10000);
   plat(wallsPos, -10000, 200, 10000);
-
+  
 
 
   float platTempX = -120;

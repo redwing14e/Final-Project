@@ -1,6 +1,7 @@
 PImage back;
 PImage platImage;
-PImage barbs;
+PImage hazardImageV;
+PImage hazardImageH;
 PImage landscape;
 float groundLength = 10000;
 float ySpeed = 0;
@@ -17,15 +18,12 @@ float wallsPos = 1200;
 
 
 void gameScreen() { 
-
-  for (float landX = -groundLength/2; landX < groundLength/2; landX += width) {
+  for (float landX = charX * 0.75 -groundLength/2; landX < groundLength/2; landX += width) {
     image(landscape, -landX, 0);
   }
-
-
-
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
   
+
   textureMode(IMAGE);
   textureWrap(REPEAT);
   beginShape();
