@@ -9,10 +9,10 @@ void setup() {
   frameRate(30);
   back = loadImage("back.png");
   back.resize( 1200, 900);
-  
+
   sky = loadImage("sky.png");
   sky.resize(width, height/2);
-  
+
   under = loadImage("underground.png");
   under.resize(width, height/2);
 
@@ -35,7 +35,7 @@ void setup() {
 void draw() {
   println(frameRate);
   if (startup) {
-   cursor();
+    cursor();
     startUp();
   } else if (game) {
     noCursor();
