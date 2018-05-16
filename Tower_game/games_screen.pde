@@ -4,6 +4,7 @@ PImage hazardImageV;
 PImage hazardImageH;
 PImage landscape;
 PImage sky;
+PImage under;
 
 float groundLength = 10000;
 float ySpeed = 0;
@@ -21,6 +22,7 @@ float wallsPos = 1200;
 
 void gameScreen() { 
   image(sky, 0, 0);
+  image(under,0, height/2);
   
   for (float landX = charX * 0.75 -groundLength/2; landX < groundLength/2; landX += width) {
     float landY = charY * -0.1 - height/2 + 100;

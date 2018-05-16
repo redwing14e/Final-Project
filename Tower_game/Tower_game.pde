@@ -11,7 +11,10 @@ void setup() {
   back.resize( 1200, 900);
   
   sky = loadImage("sky.png");
-  sky.resize(width, height);
+  sky.resize(width, height/2);
+  
+  under = loadImage("underground.png");
+  under.resize(width, height/2);
 
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));
