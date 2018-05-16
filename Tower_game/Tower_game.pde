@@ -9,6 +9,9 @@ void setup() {
   frameRate(30);
   back = loadImage("back.png");
   back.resize( 1200, 900);
+  
+  sky = loadImage("sky.png");
+  sky.resize(width, height);
 
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));

@@ -3,6 +3,8 @@ PImage platImage;
 PImage hazardImageV;
 PImage hazardImageH;
 PImage landscape;
+PImage sky;
+
 float groundLength = 10000;
 float ySpeed = 0;
 boolean jump = false;
@@ -18,10 +20,13 @@ float wallsPos = 1200;
 
 
 void gameScreen() { 
+  image(sky, 0, 0);
+  
   for (float landX = charX * 0.75 -groundLength/2; landX < groundLength/2; landX += width) {
     float landY = charY * -0.1 - height/2 + 100;
     image(landscape, -landX, landY);
   }
+  
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
   
 

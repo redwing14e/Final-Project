@@ -1,6 +1,6 @@
 void platforms() {
   plat(-groundLength/2, 0, groundLength, height/2);
-  plat(-10, -150, 300, 30);
+  plat(100, -150, 300, 30);
   
   
   //wals
