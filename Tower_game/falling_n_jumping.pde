@@ -1,5 +1,5 @@
 void jumpFall(){
-  float gravity = 2.2;
+  float gravity = 0.5;
   if (jump) {
     charY += ySpeed;
     if(ySpeed < 20){

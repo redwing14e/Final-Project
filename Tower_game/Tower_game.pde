@@ -11,10 +11,10 @@ void setup() {
   back.resize( 1200, 900);
 
   sky = loadImage("sky.png");
-  sky.resize(width, height/2);
+  sky.resize(width, height);
 
   under = loadImage("underground.png");
-  under.resize(width, height/2);
+  under.resize(width, height);
 
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));
@@ -29,11 +29,10 @@ void setup() {
 
   medGothic = createFont("Medusa Gothic.otf", 40);
 
-  fullScreen(P2D);
+  size(700, 700, P2D);
 }
 
 void draw() {
-  println(frameRate);
   if (startup) {
     cursor();
     startUp();

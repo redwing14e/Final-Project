@@ -18,19 +18,24 @@ float finishY;
 float charX = 0;
 float charY =  -charSize;
 float wallsPos = 1200;
+boolean aboveSky;
 
 
 void gameScreen() { 
-  image(sky, 0, 0);
-  image(under,0, height/2);
-  
+
+  if (aboveSky) {
+    image(sky, 0, 0);
+  } else {
+    image(under, 0, 0);
+  }
+
   for (float landX = charX * 0.75 -groundLength/2; landX < groundLength/2; landX += width) {
     float landY = charY * -0.1 - height/2 + 100;
     image(landscape, -landX, landY);
   }
-  
+
   translate(-(charX - width/2), -(charY - (height/2 + charSize)));
-  
+
 
   textureMode(IMAGE);
   textureWrap(REPEAT);
@@ -48,6 +53,12 @@ void gameScreen() {
   stroke(0);
   rectMode(CORNER);
   rect(charX, charY, charSize, charSize);
+  
+  if(charY < -450){
+    aboveSky = true;
+  } else {
+    aboveSky = false;
+  }
   keyControl();
   jumpFall();
   platforms();
