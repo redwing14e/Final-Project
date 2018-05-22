@@ -29,7 +29,7 @@ void setup() {
 
   medGothic = createFont("Medusa Gothic.otf", 40);
 
-  fullscreen(P2D);
+  fullScreen(P2D);
 }
 
 void draw() {
