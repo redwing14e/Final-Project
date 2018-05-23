@@ -21,6 +21,8 @@ void setup() {
 
   platImage = loadImage("bricks.png");
   platImage.resize(200, 200);
+  signImage = loadImage("sign1.png");
+  signImage.resize(700, 600);
 
   hazardImageV = loadImage("spikesV.png");
   hazardImageV.resize(50, 50);
@@ -29,7 +31,9 @@ void setup() {
 
   deathFont = createFont("Medusa Gothic.otf", 40);
   startFont = createFont("font.TTF", 100);
-  
+
+
+
   for (int i=0; i < cloudNames.length; i++) {
     String imageName = cloudNames[i];
     clouds[i] = loadImage(imageName);

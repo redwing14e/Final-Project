@@ -3,8 +3,14 @@ String[] cloudNames = { "cloud1.png", "cloud2.png", "cloud3.png", "cloud4.png"};
 PImage[] clouds = new PImage[cloudNames.length];
 Cloud[] myClouds = new Cloud[40];
 
+PImage signImage;
+
+
+
+
 
 void startUp() {
+ 
 
   PImage tower = loadImage("tower 2.png");
 
@@ -38,7 +44,7 @@ void startUp() {
   }
   //background rectangle
   rect(0, 0, width, height);
-  
+
   //lower grass rectangle
   fill(0, 255, 0);
   rect(0, 2*height/3, width, height/3);
@@ -48,9 +54,11 @@ void startUp() {
     myClouds[i].move();
     myClouds[i].display();
   }
+
+  image(signImage, 250 , 200);
   fill(0);
   textFont(startFont);
-  text("Tower \n Climber", width/6, height/3);
+  text("Tower \nClimber", width/6 - 20, height/3 + 20);
 
   image(tower, towerXpos, towerYpos);
 }
@@ -65,7 +73,7 @@ class Cloud {
 
   Cloud(PImage tempImage) {
     x = random(width);
-    y = random(height/4);
+    y = random(-20, height/5);
     speed = random(1, 5);
     size = floor(speed * 40);
     image = tempImage;
