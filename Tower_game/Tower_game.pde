@@ -27,7 +27,17 @@ void setup() {
   hazardImageH = loadImage("spikesH.png");
   hazardImageH.resize(50, 50);
 
-  medGothic = createFont("Medusa Gothic.otf", 40);
+  deathFont = createFont("Medusa Gothic.otf", 40);
+  startFont = createFont("font.TTF", 100);
+  
+  for (int i=0; i < cloudNames.length; i++) {
+    String imageName = cloudNames[i];
+    clouds[i] = loadImage(imageName);
+  }
+  for (int i = 0; i < myClouds.length; i ++) {
+    int randomImage = floor(random(0, 4));
+    myClouds[i] = new Cloud(clouds[randomImage]);
+  }
 
   fullScreen(P2D);
 }

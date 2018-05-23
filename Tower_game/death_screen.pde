@@ -1,10 +1,10 @@
 float a = 0;
 
-PFont medGothic;
+PFont deathFont;
 
 
 void ds() {
-  textFont(medGothic);
+  textFont(deathFont);
   textAlign(CENTER, CENTER);
   fill(50, a);
   a += 3;
