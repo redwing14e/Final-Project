@@ -1,7 +1,7 @@
 PFont startFont;
 String[] cloudNames = { "cloud1.png", "cloud2.png", "cloud3.png", "cloud4.png"};
 PImage[] clouds = new PImage[cloudNames.length];
-Cloud[] myClouds = new Cloud[40];
+Cloud[] myClouds = new Cloud[200];
 
 PImage signImage;
 
@@ -18,6 +18,8 @@ void startUp() {
   float towerYpos = height/4;
   int towerWid = width/6;
   int towerHit = height/2;
+  
+  color tintC = color(255);
 
 
 
@@ -25,24 +27,27 @@ void startUp() {
 
   if (mouseX>towerXpos && mouseX<towerXpos+ towerWid/3 && mouseY>towerYpos && mouseY<towerYpos+ towerHit) {
     if (mousePressed) {
-      fill(0, 255, 0);
+      tintC = color(0, 255, 0);
       game= true;
       startup=false;
+      
     } else {
-      fill(0, 0, 255);
+      tintC = color(0, 0, 255);
     }
   } else if (mouseX>towerXpos+ towerWid/3 && mouseX<towerXpos+ towerWid && mouseY>towerYpos+towerHit/4 && mouseY<towerYpos+ towerHit) {
     if (mousePressed) {
-      fill(0, 255, 0);
+      tintC = color(0, 255, 0);
       game= true;
       startup=false;
     } else {
-      fill(0, 0, 255);
+      tintC = color(0, 0, 255);
+     
     }
   } else {
-    fill(150, 250, 255);
+    tintC = color(255);
   }
   //background rectangle
+  fill(150, 250, 255);
   rect(0, 0, width, height);
 
   //lower grass rectangle
@@ -54,13 +59,16 @@ void startUp() {
     myClouds[i].move();
     myClouds[i].display();
   }
+  
 
   image(signImage, 250 , 200);
   fill(0);
   textFont(startFont);
   text("Tower \nClimber", width/6 - 20, height/3 + 20);
 
+  tint(tintC);
   image(tower, towerXpos, towerYpos);
+  noTint();
 }
 
 class Cloud {

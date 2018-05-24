@@ -47,6 +47,7 @@ void setup() {
 }
 
 void draw() {
+  println(frameRate);
   if (startup) {
     cursor();
     startUp();
