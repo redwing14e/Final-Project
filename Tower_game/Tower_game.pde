@@ -6,7 +6,7 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
-  frameRate(30);
+  frameRate(40);
   back = loadImage("back.png");
   back.resize( 1200, 900);
 
@@ -47,7 +47,7 @@ void setup() {
 }
 
 void draw() {
-  println(frameRate);
+  //println(frameRate);
   if (startup) {
     cursor();
     startUp();
@@ -56,5 +56,8 @@ void draw() {
     gameScreen();
   } else if (death) {
     ds();
+  } else if (menu){
+    cursor();
+    ms();
   }
 }

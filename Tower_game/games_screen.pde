@@ -54,6 +54,13 @@ void gameScreen() {
   rectMode(CORNER);
   rect(charX, charY, charSize, charSize);
   
+  if (keyPressed){
+    if (key == '`'){
+      game = false;
+      menu = true;
+    }
+  }
+  
   if(charY < -450){
     aboveSky = true;
   } else {
