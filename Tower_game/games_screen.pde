@@ -55,6 +55,13 @@ void gameScreen() {
 
   character();
   
+  if (keyPressed){
+    if (key == '`'){
+      game = false;
+      menu = true;
+    }
+  }
+  
   if(charY < -450){
     aboveSky = true;
   } else {
