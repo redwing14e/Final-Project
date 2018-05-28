@@ -1,9 +1,10 @@
-
+boolean right;
 boolean[] keys = {false, false, false, false};
 
 void keyPressed() {
   if (key == 'd' || key == 'D') {
     keys[0] = true;
+
   }
 
   if (key == 'a' || key == 'A') {
@@ -38,8 +39,16 @@ void keyControl() {
   //jumps player on key command 
   if (keyPressed) {
     if (keys[1]) {
+      right = false;
+      if(!jump){
+      walkCount +=1;
+      }
       charX -= xSpeed;
     } else if (keys[0]) {
+      if(!jump){
+      walkCount +=1;
+      }
+      right = true;
       charX += xSpeed;
     }
   }
@@ -50,6 +59,7 @@ void keyControl() {
         ySpeed = -35;
         //sets jump to true so player can not jump within their jump
         jump = true;
+        walkCount = 10;
       }
       if (keys[3]) {
         charY += 25;

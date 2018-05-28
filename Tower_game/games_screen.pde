@@ -5,12 +5,17 @@ PImage hazardImageH;
 PImage landscape;
 PImage sky;
 PImage under;
+PImage charImage;
+PImage man1;
+PImage man2;
+PImage man3;
+
 
 float groundLength = 10000;
 float ySpeed = 0;
+float xSpeed = 20;
 boolean jump = false;
-float xSpeed = 15;
-float charSize = 10;
+int charSize = 100;
 float startX;
 float finishX;
 float startY; 
@@ -48,11 +53,7 @@ void gameScreen() {
   endShape();
 
 
-
-  fill(200);
-  stroke(0);
-  rectMode(CORNER);
-  rect(charX, charY, charSize, charSize);
+  character();
   
   if(charY < -450){
     aboveSky = true;

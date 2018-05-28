@@ -10,6 +10,10 @@ void setup() {
   back = loadImage("back.png");
   back.resize( 1200, 900);
 
+  man1 = loadImage("man1.png");
+  man2 = loadImage("man2.png");
+  man3 = loadImage("man3.png"); 
+
   sky = loadImage("sky.png");
   sky.resize(width, height);
 
@@ -30,8 +34,7 @@ void setup() {
   hazardImageH.resize(50, 50);
 
   deathFont = createFont("Medusa Gothic.otf", 40);
-  startFont = createFont("font.TTF", 100);
-
+  startFont = createFont("font.TTF", 100);;
 
 
   for (int i=0; i < cloudNames.length; i++) {
@@ -43,7 +46,7 @@ void setup() {
     myClouds[i] = new Cloud(clouds[randomImage]);
   }
 
-  fullScreen(P2D);
+  size(900, 900, P2D);
 }
 
 void draw() {
