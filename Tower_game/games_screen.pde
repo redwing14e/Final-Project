@@ -62,7 +62,7 @@ void gameScreen() {
     }
   }
   
-  if(charY < -450){
+  if(charY < -height * 1.1){
     aboveSky = true;
   } else {
     aboveSky = false;

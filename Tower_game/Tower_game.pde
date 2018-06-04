@@ -34,7 +34,8 @@ void setup() {
   hazardImageH.resize(50, 50);
 
   deathFont = createFont("Medusa Gothic.otf", 40);
-  startFont = createFont("font.TTF", 100);;
+  startFont = createFont("startfont.TTF", 100);
+  signFont = createFont("signature.otf", 52);
 
 
   for (int i=0; i < cloudNames.length; i++) {
@@ -46,7 +47,7 @@ void setup() {
     myClouds[i] = new Cloud(clouds[randomImage]);
   }
 
-  size(900, 900, P2D);
+  fullScreen(P2D);
 }
 
 void draw() {

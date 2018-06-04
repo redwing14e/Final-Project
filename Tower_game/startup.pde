@@ -1,4 +1,6 @@
 PFont startFont;
+PFont signFont;
+
 String[] cloudNames = { "cloud1.png", "cloud2.png", "cloud3.png", "cloud4.png"};
 PImage[] clouds = new PImage[cloudNames.length];
 Cloud[] myClouds = new Cloud[200];
@@ -64,7 +66,13 @@ void startUp() {
   image(signImage, 250 , 200);
   fill(0);
   textFont(startFont);
+  textAlign(LEFT, CENTER);
   text("Tower \nClimber", width/6 - 20, height/3 + 20);
+  
+  textAlign(LEFT, BOTTOM);
+  textFont(signFont);
+  fill(0);
+  text("Created By: Eric Buell and Jasper Caswell", 10, height-10);
 
   tint(tintC);
   image(tower, towerXpos, towerYpos);
