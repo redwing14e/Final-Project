@@ -5,11 +5,11 @@ void character() {
 
   if(walkCount == 1){
     charImage = man1;
-  } else if(walkCount == 5){
+  } else if(walkCount == 3){
     charImage = man2;
-  } else if(walkCount == 10){
+  } else if(walkCount == 6){
     charImage = man3;
-  } else if(walkCount == 15){
+  } else if(walkCount == 9){
     walkCount = 0;
   }
   

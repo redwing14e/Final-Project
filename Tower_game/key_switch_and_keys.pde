@@ -59,7 +59,7 @@ void keyControl() {
         ySpeed = -35;
         //sets jump to true so player can not jump within their jump
         jump = true;
-        walkCount = 10;
+        walkCount = 9;
       }
       if (keys[3]) {
         charY += 25;
