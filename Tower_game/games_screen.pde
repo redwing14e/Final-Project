@@ -5,10 +5,6 @@ PImage hazardImageH;
 PImage landscape;
 PImage sky;
 PImage under;
-PImage charImage;
-PImage man1;
-PImage man2;
-PImage man3;
 
 
 float groundLength = 10000;
@@ -71,4 +67,18 @@ void gameScreen() {
   jumpFall();
   platforms();
   hazards();
+}
+
+void gameSettings(){
+  back = loadImage("back.png");
+  back.resize( 1200, 900);
+
+  sky = loadImage("sky.png");
+  sky.resize(width, height);
+
+  under = loadImage("underground.png");
+  under.resize(width, height);
+
+  landscape =loadImage("landscape.png");
+  landscape.resize(width, floor(height * 1.3));
 }

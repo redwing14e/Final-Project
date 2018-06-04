@@ -1,3 +1,8 @@
+PImage charImage;
+PImage man1;
+PImage man2;
+PImage man3;
+
 int walkCount = 1;
 void character() {
 
@@ -22,5 +27,18 @@ void character() {
   } else {
     image(charImage, charX, charY,  charSize, charSize);
   }
+}
+
+void origin(){
+  charX = 0;
+  charY = - charSize;
+  ySpeed = 0;
+  jump = false;
+}
+
+void charSettings(){
+  man1 = loadImage("man1.png");
+  man2 = loadImage("man2.png");
+  man3 = loadImage("man3.png"); 
 
 }

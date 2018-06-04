@@ -107,3 +107,20 @@ class Cloud {
     image(image, x, y, size, size);
   }
 }
+void startupSettings(){
+  startFont = createFont("startfont.TTF", 100);
+  signFont = createFont("signature.otf", 52);
+  signImage = loadImage("sign1.png");
+  signImage.resize(700, 600);
+    
+
+  for (int i=0; i < cloudNames.length; i++) {
+    String imageName = cloudNames[i];
+    clouds[i] = loadImage(imageName);
+  }
+  for (int i = 0; i < myClouds.length; i ++) {
+    int randomImage = floor(random(0, 4));
+    myClouds[i] = new Cloud(clouds[randomImage]);
+  }
+
+}

@@ -4,6 +4,7 @@ PFont deathFont;
 
 
 void ds() {
+
   textFont(deathFont);
   textAlign(CENTER, CENTER);
   fill(50, a);
@@ -20,4 +21,7 @@ void ds() {
     fill(255);
     text("Press 'f' to Pay Respect", width/2, 3*height/4);
   }
+}
+void deathSettings () {
+  deathFont = createFont("Medusa Gothic.otf", 40);
 }
