@@ -11,7 +11,7 @@ float groundLength = 10000;
 float ySpeed = 0;
 float xSpeed = 20;
 boolean jump = false;
-int charSize = 100;
+
 float startX;
 float finishX;
 float startY; 

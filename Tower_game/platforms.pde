@@ -10,7 +10,7 @@ void plat(float x, float y, float leg, float hi) {
   vertex(x, y + hi, 0, hi);
   endShape();
 
-  if (charY > y - (charSize + 1) && charY < y + hi) {
+  if (charY > y - (charHeight + 1) && charY < y + hi) {
     if (charY > y && charY < y + hi) {
       if (charX > x - charSize && charX < x + xSpeed) {
         charX = x - charSize;
@@ -18,11 +18,11 @@ void plat(float x, float y, float leg, float hi) {
         charX = x + leg;
       }
     }
-    if (charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi/2) {
+    if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi/2) {
       if (jump) {
         if (ySpeed >= 0) {
           jump = false;
-          charY = y - charSize;
+          charY = y - charHeight;
           ySpeed = 0;
         } else {
           charY = y + hi;
@@ -31,10 +31,10 @@ void plat(float x, float y, float leg, float hi) {
       }
     } else {
       //this bit here makes it fall of edges
-      if (charX < x - charSize && charX > x - charSize - (xSpeed + charSize) && charY < y + charSize) {
+      if (charX < x - charSize && charX > x - charSize - (xSpeed + charSize) && charY < y + charHeight) {
         jump = true;
       } 
-      if (charX > x + leg && charX < (x + leg) + (xSpeed + charSize) && charY < y + charSize) {
+      if (charX > x + leg && charX < (x + leg) + (xSpeed + charSize) && charY < y + charHeight) {
         jump = true;
       }
     }
