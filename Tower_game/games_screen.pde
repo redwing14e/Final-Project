@@ -12,12 +12,8 @@ float ySpeed = 0;
 float xSpeed = 20;
 boolean jump = false;
 
-float startX;
-float finishX;
-float startY; 
-float finishY;
-float charX = 0;
-float charY =  -charSize;
+
+
 float wallsPos = 1200;
 boolean aboveSky;
 
@@ -49,14 +45,14 @@ void gameScreen() {
   endShape();
 
 
-  character();
-  
   if (keyPressed){
     if (key == '`'){
       game = false;
       menu = true;
     }
   }
+    
+  character();
   
   if(charY < -height * 1.1){
     aboveSky = true;
@@ -67,6 +63,7 @@ void gameScreen() {
   jumpFall();
   platforms();
   hazards();
+
 }
 
 void gameSettings(){

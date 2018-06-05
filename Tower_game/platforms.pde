@@ -9,32 +9,41 @@ void plat(float x, float y, float leg, float hi) {
   vertex(x + leg, y + hi, leg, hi);
   vertex(x, y + hi, 0, hi);
   endShape();
-
+  //when the character is within the platform or just above do run anything that the platform would do to effect it
   if (charY > y - (charHeight + 1) && charY < y + hi) {
+    //when the character is within the platform  vertically
     if (charY > y && charY < y + hi) {
+      
+      //check if the player is just outright outside the wall and place them just at the wal so they cant run in
       if (charX > x - charSize && charX < x + xSpeed) {
         charX = x - charSize;
       } else if (charX < x + leg && charX > (x + leg) - (charSize + xSpeed)) {
         charX = x + leg;
       }
+      
     }
+    //if the character is within the platform both vertiaclly and horizontally 
     if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi/2) {
+      //if the character is in jump and coming down than place them ontop the platform
       if (jump) {
         if (ySpeed >= 0) {
           jump = false;
           charY = y - charHeight;
           ySpeed = 0;
+          //if they are in jump but going up than put them under the platform to stop them from going through the bottom
         } else {
           charY = y + hi;
           ySpeed = 0;
         }
       }
+   //if they are still within the platform vertically or just above yet not within it horizontally 
     } else {
-      //this bit here makes it fall of edges
-      if (charX < x - charSize && charX > x - charSize - (xSpeed + charSize) && charY < y + charHeight) {
+      
+      //if they are in the area between the platform and their outer corner of the thier characterthey fall of the ledges
+      if (charX < x - charSize && charX > x - charSize  - (xSpeed + charSize *0.75) && charY < y + charHeight) {
         jump = true;
       } 
-      if (charX > x + leg && charX < (x + leg) + (xSpeed + charSize) && charY < y + charHeight) {
+      if (charX > x + leg && charX < (x + leg) + (xSpeed + charSize*0.75 )  && charY < y + charHeight) {
         jump = true;
       }
     }

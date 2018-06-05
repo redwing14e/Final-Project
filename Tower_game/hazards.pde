@@ -29,7 +29,7 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
   }
 
 
-  if (charX > x - charSize && charX < x + leg && charY > y - charSize && charY < y + hi) {   
+  if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi) {   
     origin();
     death = true;
     game = false;

@@ -4,6 +4,8 @@ PImage man2;
 PImage man3;
 int charSize = 100;
 int charHeight = 140;
+float charX = 0;
+float charY =  -charHeight;
 
 
 int walkCount = 1;
@@ -13,13 +15,13 @@ void character() {
 
   if(walkCount == 1){
     charImage = man1;
-  } else if(walkCount == 3){
+  } else if(walkCount == 6){
     charImage = man2;
-  } else if(walkCount == 5){
+  } else if(walkCount == 11){
     charImage = man3;
-  } else if(walkCount == 7){
+  } else if(walkCount == 16){
     charImage = man2;
-  } else if(walkCount == 9){
+  } else if(walkCount == 21){
     walkCount = 0;
   }
   
@@ -31,7 +33,7 @@ void character() {
   if (!right) {
     pushMatrix();
     scale(-1.0, 1.0);
-    image(charImage, -charX - charSize, charY, charSize,  charHeight);
+    image(charImage, -charX -charSize, charY, charSize,  charHeight);
     popMatrix();
   } else {
     image(charImage, charX, charY,  charSize, charHeight);
@@ -40,7 +42,7 @@ void character() {
 
 void origin(){
   charX = 0;
-  charY = - charSize;
+  charY = -charHeight;
   ySpeed = 0;
   jump = false;
 }
