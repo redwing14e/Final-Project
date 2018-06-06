@@ -44,6 +44,7 @@ void hazSettings(){
 }
 
 void hazards(){
+  haz(500, -200, 120, 60, false);
 
   
 }

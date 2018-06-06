@@ -2,7 +2,7 @@ PImage charImage;
 PImage man1;
 PImage man2;
 PImage man3;
-int charSize = 100;
+int charSize = 80;
 int charHeight = 140;
 float charX = 0;
 float charY =  -charHeight;
