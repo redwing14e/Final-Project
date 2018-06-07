@@ -3,7 +3,7 @@ PImage platImage;
 PImage landscape;
 PImage sky;
 PImage under;
-
+PFont helpFont;
 boolean aboveSky;
 boolean won = false;
 
@@ -53,16 +53,23 @@ void gameScreen() {
 
   if (!won) {
     keyControl();
-    constrain(charX, -wallsPos + 202, wallsPos - 2);
+   if(charX < -wallsPos + 202){
+     charX = -wallsPos + 202;
+   } 
+   if(charX > wallsPos - 2){
+     charX = wallsPos - 2;
+   }
   }
   jumpFall();
   platforms();
   hazards();
   
-  fill(0);
+  fill(255, 135, 0);
   textFont(startFont);
   textAlign(BOTTOM, LEFT);
   text("GET TO THE TOP to ESCAPE!", - wallsPos, 150);
+  textFont(helpFont);
+  text("Press ~ for the menu", - wallsPos, 220);
 }
 
 void gameSettings() {
@@ -77,4 +84,6 @@ void gameSettings() {
 
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));
+  
+   helpFont = createFont("helpFont.vlw", 52);
 }
