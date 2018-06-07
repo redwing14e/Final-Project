@@ -32,5 +32,4 @@ void draw() {
     cursor();
     ms();
   }
-  println(ySpeed);
 }

@@ -58,7 +58,11 @@ void gameScreen() {
   jumpFall();
   platforms();
   hazards();
-
+  
+  fill(0);
+  textFont(startFont);
+  textAlign(BOTTOM, LEFT);
+  text("GET TO THE TOP to ESCAPE!", - wallsPos, 150);
 }
 
 void gameSettings() {
