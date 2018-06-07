@@ -14,7 +14,7 @@ void setup() {
   deathSettings();
   charSettings();
 
-
+  //size(800, 800, P2D);
   fullScreen(P2D);
 } 
 
@@ -32,4 +32,5 @@ void draw() {
     cursor();
     ms();
   }
+  println(ySpeed);
 }

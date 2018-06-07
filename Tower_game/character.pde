@@ -6,7 +6,7 @@ float groundLength = 10000;
 float wallsPos = 1200;
 int charSize = 75;
 int charHeight = 125;
-float charX = -wallsPos + 150;
+float charX = -wallsPos + 220;
 float charY =  -charHeight;
 float ySpeed = 0;
 float xSpeed = 20;
@@ -31,6 +31,7 @@ void character() {
 
   if (jump) {
     walkCount = 1;
+
   }
 
   charImage.resize(charSize, charHeight);
@@ -45,7 +46,7 @@ void character() {
 }
 
 void origin() {
-  charX = -wallsPos + 150;
+  charX = -wallsPos + 220;
   charY = -charHeight;
   ySpeed = 0;
   jump = false;

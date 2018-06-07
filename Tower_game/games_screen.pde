@@ -5,6 +5,7 @@ PImage sky;
 PImage under;
 
 boolean aboveSky;
+boolean won = false;
 
 
 void gameScreen() { 
@@ -20,8 +21,9 @@ void gameScreen() {
     image(landscape, -landX, landY);
   }
 
-  translate(-(charX - width/2), -(charY - (height/2 + charSize)));
-
+  if (!won) {
+    translate(-(charX - width/2), -(charY - (height/2 + charSize)));
+  }
 
   textureMode(IMAGE);
   textureWrap(REPEAT);
@@ -34,28 +36,32 @@ void gameScreen() {
   endShape();
 
 
-  if (keyPressed){
-    if (key == '`'){
+  if (keyPressed) {
+    if (key == '`') {
       game = false;
       menu = true;
     }
   }
-    
+
   character();
-  
-  if(charY < -height * 1.1){
+
+  if (charY < -height * 1.1) {
     aboveSky = true;
   } else {
     aboveSky = false;
   }
-  keyControl();
+
+  if (!won) {
+    keyControl();
+    constrain(charX, -wallsPos + 202, wallsPos - 2);
+  }
   jumpFall();
   platforms();
   hazards();
 
 }
 
-void gameSettings(){
+void gameSettings() {
   back = loadImage("back.png");
   back.resize( 1200, 900);
 

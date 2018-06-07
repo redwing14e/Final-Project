@@ -24,7 +24,7 @@ void plat(float x, float y, float leg, float hi) {
       
     }
     //if the character is within the platform both vertiaclly and horizontally 
-    if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi/2) {
+    if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi) {
       //if the character is in jump and coming down than place them ontop the platform
       if (jump) {
         if (ySpeed >= 0) {
@@ -54,7 +54,7 @@ void plat(float x, float y, float leg, float hi) {
 void platforms() {
   plat(-groundLength/2, 0, groundLength, height/2);
 
-  plat(0, -200, 200, 25);
+  plat(0, -350, 200, 25);
 
 
   //walls

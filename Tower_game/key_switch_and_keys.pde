@@ -1,5 +1,5 @@
 boolean right;
-boolean[] keys = {false, false, false, false};
+boolean[] keys = {false, false, false};
 
 void keyPressed() {
   if (key == 'd' || key == 'D') {
@@ -14,10 +14,6 @@ void keyPressed() {
   if (key == 'w' || key == 'W') {
     keys[2] = true;
   }
-
-  if (key == 's' || key == 'S') {
-    keys[3] = true;
-  }
 }
 void keyReleased() {
   if (key == 'd' || key == 'D') {
@@ -28,10 +24,6 @@ void keyReleased() {
   }  
   if (key == 'w' || key == 'W') {
     keys[2] = false;
-  }
-
-  if (key == 's' || key == 'S') {
-    keys[3] = false;
   }
 }
 
@@ -60,11 +52,6 @@ void keyControl() {
         //sets jump to true so player can not jump within their jump
         jump = true;
         walkCount = 6;
-      }
-      if (keys[3]) {
-        charY += 25;
-        ySpeed = 0;
-        jump = true;
       }
     }
   }
