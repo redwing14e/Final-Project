@@ -6,7 +6,7 @@ boolean death = false;
 boolean win = false;
 
 void setup() {
-  frameRate(90);
+  frameRate(30);
   startupSettings();
   gameSettings();
   hazSettings();
@@ -16,7 +16,7 @@ void setup() {
 
 
   fullScreen(P2D);
-}
+} 
 
 void draw() {
   //println(frameRate);
