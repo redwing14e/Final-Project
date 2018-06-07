@@ -1,4 +1,5 @@
-
+PImage hazardImageV;
+PImage hazardImageH;
 
 void haz(float x, float y, float leg, float hi, boolean vert) {
   PImage spikes;
@@ -13,8 +14,8 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
     beginShape(); 
     texture(spikes);
     vertex(x, y, 0, 0);
-    vertex(x + leg, y, 50, 0);
-    vertex(x + leg, y + hi, 50, hi);
+    vertex(x + leg, y, 70, 0);
+    vertex(x + leg, y + hi, 70, hi);
     vertex(x, y + hi, 0, hi);
     endShape();
   } else {
@@ -23,8 +24,8 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
     texture(spikes);
     vertex(x, y, 0, 0);
     vertex(x + leg, y, leg, 0);
-    vertex(x + leg, y + hi, leg, 50);
-    vertex(x, y + hi, 0, 50);
+    vertex(x + leg, y + hi, leg, 70);
+    vertex(x, y + hi, 0, 70);
     endShape();
   }
 
@@ -38,9 +39,9 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
 
 void hazSettings(){
   hazardImageV = loadImage("spikesV.png");
-  hazardImageV.resize(50, 50);
+  hazardImageV.resize(70, 70);
   hazardImageH = loadImage("spikesH.png");
-  hazardImageH.resize(50, 50);
+  hazardImageH.resize(70, 70);
 }
 
 void hazards(){

@@ -1,20 +1,9 @@
 PImage back;
 PImage platImage;
-PImage hazardImageV;
-PImage hazardImageH;
 PImage landscape;
 PImage sky;
 PImage under;
 
-
-float groundLength = 10000;
-float ySpeed = 0;
-float xSpeed = 20;
-boolean jump = false;
-
-
-
-float wallsPos = 1200;
 boolean aboveSky;
 
 

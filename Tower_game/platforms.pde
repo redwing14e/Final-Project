@@ -1,3 +1,4 @@
+
 void plat(float x, float y, float leg, float hi) {
   stroke(0);
   textureMode(IMAGE);
