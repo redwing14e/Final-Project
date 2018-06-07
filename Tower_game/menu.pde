@@ -3,7 +3,7 @@ int backCount =0;
 void ms() {
   textFont(startFont);
   textAlign(LEFT,TOP);
-  if (mousePressed && mouseX>width/10 && mouseY>height/10 && mouseX< width/10 + 1.88*width/5 && mouseY< height/10 + height/13) {
+  if (mousePressed && mouseX>width/10 && mouseY>height/10 && mouseX< 570 && mouseY< height/10 + height/13) {
     backC=true;
   }
 
