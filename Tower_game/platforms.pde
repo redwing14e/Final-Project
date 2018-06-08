@@ -52,18 +52,28 @@ void plat(float x, float y, float leg, float hi) {
 }
 
 void platandhaz() {
+  float movePlat = 1100;
+  noLoop();
+
   plat(-groundLength/2, 0, groundLength, height/2);
 
   plat(-700, -250, 200, 25);
   plat(200, -450, 200, 25);
   plat(500, -600, 500, 25);
   plat(1125, -1000, 75, 25);
-  plat(mouseX, -1200, 100, 25); 
+  if (keyPressed && keyCode == LEFT) {
+    movePlat -= 5;
+  } else if (keyPressed && keyCode == RIGHT) {
+    movePlat += 5;
+  }
+  plat(movePlat, -1200, 100, 25); 
 
 
   //walls
   plat(-wallsPos, -10000, 200, 10000);
   plat(wallsPos, -10000, 200, 10000);
+
+  loop();
 }
 
 void platSettings() {
