@@ -42,8 +42,16 @@ void gameScreen() {
       menu = true;
     }
   }
-
   character();
+  if (!won) {
+    keyControl();
+   if(charX < -wallsPos + 202){
+     charX = -wallsPos + 202;
+   } 
+   if(charX > wallsPos - 2){
+     charX = wallsPos - charSize - 2;
+   }
+  
 
   if (charY < -height * 1.1) {
     aboveSky = true;
@@ -51,18 +59,10 @@ void gameScreen() {
     aboveSky = false;
   }
 
-  if (!won) {
-    keyControl();
-   if(charX < -wallsPos + 202){
-     charX = -wallsPos + 202;
-   } 
-   if(charX > wallsPos - 2){
-     charX = wallsPos - 2;
-   }
+
   }
   jumpFall();
-  platforms();
-  hazards();
+  platandhaz();
   
   fill(255, 135, 0);
   textFont(startFont);

@@ -43,9 +43,3 @@ void hazSettings(){
   hazardImageH = loadImage("spikesH.png");
   hazardImageH.resize(70, 70);
 }
-
-void hazards(){
-  haz(500, -200, 120, 60, false);
-
-  
-}

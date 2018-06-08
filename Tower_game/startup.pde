@@ -6,6 +6,7 @@ PImage[] clouds = new PImage[cloudNames.length];
 Cloud[] myClouds = new Cloud[200];
 
 PImage signImage;
+PImage grass;
 
 
 
@@ -62,6 +63,17 @@ void startUp() {
     myClouds[i].display();
   }
   
+  
+  textureMode(IMAGE);
+  textureWrap(REPEAT);
+  beginShape();
+  texture(grass);
+  vertex(0, 2*height/3, 0, 0);
+  vertex(width, 2*height/3, width, 0);
+  vertex(width, height, width, 2* height/3);
+  vertex(0 ,height, 0, 2*height/3);
+  endShape();
+  
 
   image(signImage, 250 , 200);
   fill(0);
@@ -112,6 +124,8 @@ void startupSettings(){
   signFont = createFont("signature.otf", 52);
   signImage = loadImage("sign1.png");
   signImage.resize(700, 600);
+  grass = loadImage("grass.jpg");
+  grass.resize(width/2, 2*height/3);
     
 
   for (int i=0; i < cloudNames.length; i++) {

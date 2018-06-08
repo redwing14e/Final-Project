@@ -19,13 +19,13 @@ void character() {
 
   if (walkCount == 1) {
     charImage = man1;
-  } else if (walkCount == 6) {
+  } else if (walkCount == 4) {
     charImage = man2;
-  } else if (walkCount == 11) {
+  } else if (walkCount ==7) {
     charImage = man3;
-  } else if (walkCount == 16) {
+  } else if (walkCount == 10) {
     charImage = man2;
-  } else if (walkCount == 21) {
+  } else if (walkCount == 13) {
     walkCount = 0;
   }
 
