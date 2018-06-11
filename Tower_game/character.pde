@@ -50,6 +50,7 @@ void origin() {
   charY = -charHeight;
   ySpeed = 0;
   jump = false;
+  movePlat = 800;
 }
 
 void charSettings() {

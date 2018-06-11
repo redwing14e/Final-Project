@@ -8,10 +8,6 @@ Cloud[] myClouds = new Cloud[200];
 PImage signImage;
 PImage grass;
 
-
-
-
-
 void startUp() {
  
 
