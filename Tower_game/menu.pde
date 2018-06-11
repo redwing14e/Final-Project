@@ -43,7 +43,16 @@ void ms() {
   textFont(helpFont);
   textAlign(CENTER,CENTER);
   textSize(78);
-  text("S",width/2+100,700);
-  
-  
+  text("W",width/2+70,440);
+  text("A",width/2-120,660);
+  text("S",width/2+100,660);
+  text("D",width/2+320,660);
+  textSize(32);
+  text("JUMP",width/2+70,520);
+  text("MOVE",width/2-120,720);
+  text("LEFT",width/2-120,760);
+  text("MOVE",width/2+320,720);
+  text("RIGHT",width/2+320,760);
+  text("ABSOLUTELY",width/2+100,720);
+  text("USELESS",width/2+100,760);
 }
