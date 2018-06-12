@@ -4,6 +4,7 @@ PImage landscape;
 PImage sky;
 PImage under;
 PFont helpFont;
+PFont helpFontsml;
 boolean aboveSky;
 boolean won = false;
 
@@ -70,6 +71,13 @@ void gameScreen() {
   text("GET TO THE TOP to ESCAPE!", - wallsPos, 150);
   textFont(helpFont);
   text("Press ~ for the menu", - wallsPos, 220);
+  rectMode(CORNER);
+  fill(255, 135, 0);
+  rect(1415, -1300, 325, 100, 15);
+  fill(0);
+  textFont(helpFontsml);
+  textAlign(CENTER, CENTER);
+  text("Some Platforms move \n try the right n' left arrow keys", 1575, -1250);
 }
 
 void gameSettings() {
@@ -85,5 +93,7 @@ void gameSettings() {
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));
   
-   helpFont = createFont("helpFont.vlw", 52);
+  helpFont = createFont("helpFont.vlw", 52);
+  helpFontsml = createFont("helpFont.vlw", 24);
+   
 }

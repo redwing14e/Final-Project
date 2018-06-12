@@ -74,13 +74,23 @@ void platandhaz() {
     movePlat = 999;
   }
   plat(movePlat, -1200, 200, 25); 
+  plat(1400, -1100, 175, 20);
+  plat(1565, -1275, 20, 185);
+  
   haz(0, -1290, 90, 90, true);
   plat(-1000, -1400, 200, 50);
+  
+  for(float i = 0; i < 5; i++ ){
+    plat(-1000, -1400 - i * 300, 200, 25);
+  }
+  
+  plat(-600,- 2800, 400, 25);
 
 
   //walls
   plat(-wallsPos, -10000, 200, 10000);
   plat(wallsPos, -10000, 200, 10000);
+
 }
 
 void platSettings() {

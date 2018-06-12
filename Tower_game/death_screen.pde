@@ -4,7 +4,7 @@ PFont deathFont;
 
 
 void ds() {
-stroke(255);
+
   textFont(deathFont);
   textAlign(CENTER, CENTER);
   fill(50, a);
@@ -20,11 +20,11 @@ stroke(255);
   if (a>=100) {
     fill(255);
     text("Press 'f' to Pay Respect", width/2, 3*height/4);
-    
-     //draw settings for the smile
+
+    //draw settings for the smile
     noFill();
-    
-    strokeWeight(900/ 30);
+    stroke(255);
+    strokeWeight(30);
     ellipseMode(CENTER);
 
     //base circle
@@ -32,9 +32,9 @@ stroke(255);
 
     //eyes
     ellipse(width/2 + 90, height/2 - 90, 90, 90); //right eye
-     ellipse(width/2 - 90, height/2 - 90, 90, 90); //left eye
-    arc(width/2, 3 * height/4 - 50, 450, 450,PI, 2 * PI);//mouth
-    noStroke();
+    ellipse(width/2 - 90, height/2 - 90, 90, 90); //left eye
+    arc(width/2, 3 * height/4 - 50, 450, 450, PI, 2 * PI);//mouth
+    strokeWeight(1);
   }
 }
 void deathSettings () {
