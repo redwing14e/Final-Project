@@ -31,8 +31,6 @@ void ms() {
     menu = false;
     origin();
   }
-  fill(255);
-  rect(width/10, 8 * height/10, 425, 90);
   fill(0);
   text("START", width/10, 8 * height/10);
 
