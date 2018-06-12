@@ -46,8 +46,10 @@ void character() {
 }
 
 void origin() {
-  charX = -wallsPos + 220;
-  charY = -charHeight;
+  charX = -500;
+  charY = -2800 - charHeight;
+  //charX = -wallsPos + 220;
+  //charY = -charHeight;
   ySpeed = 0;
   jump = false;
   movePlat = 800;
