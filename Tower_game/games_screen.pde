@@ -77,7 +77,7 @@ void gameScreen() {
   fill(0);
   textFont(helpFontsml);
   textAlign(CENTER, CENTER);
-  text("Some Platforms move \n try the right n' left arrow keys", 1575, -1250);
+  text("Some Platforms move \n try the right n' left arrow keys", 1575, -1450);
 }
 
 void gameSettings() {

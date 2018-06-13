@@ -15,6 +15,7 @@ float xSpeed = 20;
 int walkCount = 1;
 void character() {
 
+  
   imageMode(CORNER);
 
   if (walkCount == 1) {
