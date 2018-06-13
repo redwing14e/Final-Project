@@ -15,7 +15,7 @@ void setup() {
   charSettings();
 
   //size(800, 800, P2D);
-  fullScreen(P2D);
+  fullScreen(P2D,2);
 } 
 
 void draw() {
