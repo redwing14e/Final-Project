@@ -47,7 +47,7 @@ void character() {
 
 void origin() {
   charX = -500;
-  charY = -2800 - charHeight;
+  charY = -3600 - charHeight;
   //charX = -wallsPos + 220;
   //charY = -charHeight;
   ySpeed = 0;

@@ -73,11 +73,11 @@ void gameScreen() {
   text("Press ~ for the menu", - wallsPos, 220);
   rectMode(CORNER);
   fill(255, 135, 0);
-  rect(1415, -1300, 325, 100, 15);
+  rect(1415, -1500, 325, 100, 15);
   fill(0);
   textFont(helpFontsml);
   textAlign(CENTER, CENTER);
-  text("Some Platforms move \n try the right n' left arrow keys", 1575, -1250);
+  text("Some Platforms move \n try the right n' left arrow keys", 1575, -1350);
 }
 
 void gameSettings() {

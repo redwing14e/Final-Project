@@ -25,7 +25,7 @@ void plat(float x, float y, float leg, float hi) {
       }
     }
     //if the character is within the platform both vertiaclly and horizontally 
-    if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi) {
+    if (charX > x - charSize && charX < x + leg && charY +  charHeight > y  && charY + charHeight/2 < y + hi) {
       //if the character is in jump and coming down than place them ontop the platform
       if (jump) {
         if (ySpeed >= 0) {
@@ -59,7 +59,7 @@ void platandhaz() {
   plat(-700, -250, 200, 25);
   plat(200, -450, 200, 25);
   haz(-300, -400, 650, 30, false);
-  plat(550, -600, 500, 25);
+  plat(550, -700, 500, 25);
   haz(450, -500, 50, 80, true);
   plat(1125, -1000, 75, 25);
   if (keyPressed && keyCode == LEFT) {
@@ -73,24 +73,24 @@ void platandhaz() {
   } else if (movePlat > wallsPos - 200){
     movePlat = 999;
   }
-  plat(movePlat, -1200, 200, 25); 
-  plat(1400, -1100, 185, 20);
-  plat(1565, -1275, 20, 195);
+  plat(movePlat, -1300, 200, 25); 
+  plat(1400, -1200, 185, 20);
+  plat(1565, -1475, 20, 195);
   
-  haz(0, -1290, 90, 90, true);
-  plat(-1000, -1400, 200, 50);
+  haz(0, -1490, 90, 90, true);
+  plat(-1000, -1600, 200, 50);
   
   for(float i = 0; i < 5; i++ ){
-    plat(-1000, -1400 - i * 300, 200, 25);
+    plat(-1000, -1600 - i * 400, 200, 25);
   }
   
-  plat(-600,- 2800, 400, 25);
+  plat(-600,- 3400, 400, 25);
   
-  plat(0,-3000, 400, 25);
-  haz(157, -3075, 75, 75, true);
+  plat(0,-3600, 400, 25);
+  haz(157, -3675, 75, 75, true);
 
-  plat(400,-3200, 400, 25);
-  haz(497, -3275, 75, 75, true);
+  plat(800,-3800, 400, 25);
+  haz(937, -3875, 75, 75, true);
 
   //walls
   plat(-wallsPos, -10000, 200, 10000);
