@@ -90,7 +90,7 @@ void platandhaz() {
   haz(157, -3675, 75, 75, true);
 
   plat(800,-3800, 400, 25);
-  haz(937, -3875, 75, 75, true);
+  haz(1005, -3875, 75, 75, true);
 
   //walls
   plat(-wallsPos, -10000, 200, 10000);
