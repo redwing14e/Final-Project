@@ -25,6 +25,14 @@ void gameScreen() {
   if (!won) {
     translate(-(charX - width/2), -(charY - (height/2 + charSize)));
   }
+  
+  if(charX <-700 && charY<-10000){
+    won=true;
+  }
+  if(won){
+    winScreen();
+
+  }
 
   textureMode(IMAGE);
   textureWrap(REPEAT);
