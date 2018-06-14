@@ -16,3 +16,10 @@ void jumpFall() {
     }
   }
 }
+void charJump() {
+  if (!jump) {
+    ySpeed = -45;
+    //sets jump to true so player can not jump within their jump
+    jump = true;
+  }
+}

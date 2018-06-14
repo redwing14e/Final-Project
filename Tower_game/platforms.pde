@@ -52,7 +52,7 @@ void plat(float x, float y, float leg, float hi) {
 }
 float movePlat = 800;
 float comPlat = 800;
-  Boolean platRight = true;
+Boolean platRight = true;
 void platandhaz() {
 
 
@@ -115,6 +115,17 @@ void platandhaz() {
   for (int i = 0; i < 4; i ++) {
     plat(-comPlat, -4600 - i * 400, 200, 25);
   }
+  
+  plat(-400, -6200, 800, 50);
+  plat(-1000, -6650, 200, 50);
+  
+  plat(movePlat, -6900, 200, 25);
+  
+  for(int i = 0; i < 5; i ++) {
+  haz( -700 + i * 300, -7000, 50, 100, true);
+  }
+ 
+  
 
 
 
