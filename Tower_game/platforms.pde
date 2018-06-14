@@ -104,15 +104,15 @@ void platandhaz() {
   }
     
   if (platRight) {
-    comPlat += 15;
+    comPlat += 10;
   } else {
-    comPlat -= 15;
+    comPlat -= 10;
   }
 
-  for (int i = 0; i < 6; i ++) {
+  for (int i = 0; i < 4; i ++) {
     plat(comPlat, -4400 - i * 400, 200, 25);
   }
-  for (int i = 0; i < 6; i ++) {
+  for (int i = 0; i < 4; i ++) {
     plat(-comPlat, -4600 - i * 400, 200, 25);
   }
 
