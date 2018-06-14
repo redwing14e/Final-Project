@@ -13,7 +13,7 @@ void plat(float x, float y, float leg, float hi) {
   endShape();
   //when the character is within the platform or just above do run anything that the platform would do to effect it
   if (charY > y - (charHeight + 1) && charY < y + hi) {
-    
+
     //when the character is within the platform  vertically
     if (charY > y && charY < y + hi) {
 
@@ -25,7 +25,7 @@ void plat(float x, float y, float leg, float hi) {
       }
     }
     //if the character is within the platform both vertiaclly and horizontally 
-    if (charX > x - charSize && charX < x + leg && charY +  charHeight > y  && charY + charHeight/2 < y + hi) {
+    if (charX > x - charSize && charX < x + leg && charY +  charHeight > y  && charY + charHeight/5 < y + hi) {
       //if the character is in jump and coming down than place them ontop the platform
       if (jump) {
         if (ySpeed >= 0) {
@@ -51,7 +51,10 @@ void plat(float x, float y, float leg, float hi) {
   }
 }
 float movePlat = 800;
+float comPlat = 800;
+  Boolean platRight = true;
 void platandhaz() {
+
 
 
   plat(-groundLength/2, 0, groundLength, height/2);
@@ -67,38 +70,58 @@ void platandhaz() {
   } else if (keyPressed && keyCode == RIGHT) {
     movePlat += 5;
   }
- 
-  if(movePlat < -wallsPos + 200){
+
+  if (movePlat < -wallsPos + 200) {
     movePlat = -999;
-  } else if (movePlat > wallsPos - 200){
+  } else if (movePlat > wallsPos - 200) {
     movePlat = 999;
   }
   plat(movePlat, -1300, 200, 25); 
   plat(1400, -1200, 185, 20);
   plat(1565, -1475, 20, 285);
-  
+
   haz(0, -1390, 90, 90, true);
   plat(-1000, -1600, 200, 50);
-  
-  for(float i = 0; i < 5; i++ ){
+
+  for (int i = 0; i < 5; i++ ) {
     plat(-1000, -1600 - i * 400, 200, 25);
   }
-  
-  plat(-600,- 3400, 400, 25);
-  
-  plat(0,-3600, 400, 25);
+
+  plat(-600, - 3400, 400, 25);
+
+  plat(0, -3600, 400, 25);
   haz(157, -3675, 75, 75, true);
 
-  plat(800,-3800, 400, 25);
+  plat(800, -3800, 400, 25);
   haz(1015, -3875, 75, 75, true);
-  
+
   plat(-1000, -4225, 2125, 25);
+
+  if(comPlat < -wallsPos + 201){
+    platRight = true;
+  }  else if (comPlat > wallsPos - 201){
+    platRight = false;
+  }
+    
+  if (platRight) {
+    comPlat += 15;
+  } else {
+    comPlat -= 15;
+  }
+
+  for (int i = 0; i < 6; i ++) {
+    plat(comPlat, -4400 - i * 400, 200, 25);
+  }
+  for (int i = 0; i < 6; i ++) {
+    plat(-comPlat, -4600 - i * 400, 200, 25);
+  }
+
+
 
 
   //walls
   plat(-wallsPos, -10000, 200, 10000);
   plat(wallsPos, -10000, 200, 10000);
-
 }
 
 void platSettings() {
