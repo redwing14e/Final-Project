@@ -52,6 +52,7 @@ void plat(float x, float y, float leg, float hi) {
 }
 float movePlat = 800;
 float comPlat = 800;
+
 Boolean platRight = true;
 void platandhaz() {
 
@@ -97,12 +98,12 @@ void platandhaz() {
 
   plat(-1000, -4225, 2125, 25);
 
-  if(comPlat < -wallsPos + 201){
+  if (comPlat < -wallsPos + 201) {
     platRight = true;
-  }  else if (comPlat > wallsPos - 201){
+  } else if (comPlat > wallsPos - 201) {
     platRight = false;
   }
-    
+
   if (platRight) {
     comPlat += 10;
   } else {
@@ -115,19 +116,24 @@ void platandhaz() {
   for (int i = 0; i < 4; i ++) {
     plat(-comPlat, -4600 - i * 400, 200, 25);
   }
-  
+
   plat(-400, -6200, 800, 50);
   plat(-1000, -6650, 200, 50);
-  
+
   plat(movePlat, -6900, 200, 25);
-  
-  for(int i = 0; i < 5; i ++) {
-  haz( -700 + i * 300, -7000, 50, 100, true);
+
+  for (int i = 0; i < 5; i ++) {
+    haz( -700 + i * 300, -7000, 50, 100, true);
   }
- 
+
+  plat(800, -7300, 400, 25);
+
+  plat(400, -7700, 200, 25);
+  plat(0, -8100, 200, 25);
   
-
-
+   for (int i = 0; i < 4; i ++) {
+    haz(comPlat, -7400 - i * 400, 45, 100, false);
+  }
 
 
   //walls

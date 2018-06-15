@@ -71,7 +71,9 @@ void keyControl() {
   }
   if (keyPressed) {
     if (key == 'r' || key == 'R') {
-      origin();
+      charX = 900;
+      charY = -7300 - charHeight;
+      jump = false;
     }
   }
 }

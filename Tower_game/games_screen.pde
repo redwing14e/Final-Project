@@ -86,6 +86,12 @@ void gameScreen() {
   textFont(helpFontsml);
   textAlign(CENTER, CENTER);
   text("Some Platforms move \n try the right n' left arrow keys", 1575, -1450);
+  fill(255, 135, 0);
+  rect(-1475, -6880, 350, 80, 15);
+  fill(0);
+  text("Remember right and left keys!", -1300, -6850);
+  
+  
 }
 
 void gameSettings() {
