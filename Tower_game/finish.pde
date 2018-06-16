@@ -4,7 +4,7 @@ void winScreen(){
   textAlign(CENTER,CENTER);
   text("CONGRATULATIONS",-900,-10300);
   charX-=xSpeed;
-  if(endCount>1000){
+  if(endCount>500){
     won=false;
     startup=true;
     endCount=0;
