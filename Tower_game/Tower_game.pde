@@ -19,8 +19,7 @@ void setup() {
 } 
 
 void draw() {
-  println(charX);
-  println(charY);
+ 
   if (startup) {
     cursor();
     startUp();
