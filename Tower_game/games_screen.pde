@@ -51,7 +51,7 @@ void gameScreen() {
 
 
   if (keyPressed) {
-    if (key == '`') {
+    if (key == '`' || key == '~') {
       game = false;
       menu = true;
     }
