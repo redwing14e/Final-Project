@@ -146,13 +146,12 @@ void platandhaz() {
   }
 
   plat(-wallsPos + 500, -10000, 1900, 125);
-
-
+  plat(-wallsPos + 200, -10000, 50, 125);
 
   //walls
-  plat(-wallsPos, -10075, 200, 10075);
-  plat(-wallsPos + 10, -10100, 180,  25);
-  plat(wallsPos, -10075, 200, 10075);
+  plat(-wallsPos, -10025, 200, 10025);
+  plat(-wallsPos + 10, -10050, 180,  25);
+  plat(wallsPos, -10025, 200, 10025);
 }
 
 void platSettings() {
