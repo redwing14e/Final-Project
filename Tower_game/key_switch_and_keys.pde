@@ -1,5 +1,9 @@
+//creates a boolean value for the direction the character is going
 boolean right;
+
+//creates a array of booleans for the key commands for them rather being used or not used
 boolean[] keys = {false, false, false, false, false};
+
 
 void keyPressed() {
   if (key == 'd' || key == 'D') {
@@ -71,8 +75,8 @@ void keyControl() {
   }
   if (keyPressed) {
     if (key == 'r' || key == 'R') {
-      charX = 900;
-      charY = -7300 - charHeight;
+      charX = -350;
+      charY = -8550 - charHeight;
       jump = false;
     }
   }
