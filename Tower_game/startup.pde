@@ -20,7 +20,7 @@ void startUp() {
   
   color tintC = color(255);
 
-
+  
 
   tower.resize(towerWid, towerHit);
 
@@ -35,7 +35,7 @@ void startUp() {
     }
   } else if (mouseX>towerXpos+ towerWid/3 && mouseX<towerXpos+ towerWid && mouseY>towerYpos+towerHit/4 && mouseY<towerYpos+ towerHit) {
     if (mousePressed) {
-      tintC = color(0, 255, 0);
+      tintC = color(255, 0, 0);
       game= true;
       startup=false;
     } else {
