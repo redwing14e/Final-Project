@@ -10,7 +10,6 @@ boolean won = false;
 
 
 void gameScreen() { 
-
   if (aboveSky) {
     image(sky, 0, 0);
   } else {
@@ -18,20 +17,26 @@ void gameScreen() {
   }
 
   for (float landX = charX * 0.75 -groundLength/2; landX < groundLength/2; landX += width) {
-    float landY = charY * -0.1 - height/2 + 100;
+    float landY = 0;
+    if (!won) {
+      landY = charY * -0.1 - height/2 + 100;
+    } else {
+      landY = 10000 * -0.1 - height/2 + 100;
+    }
     image(landscape, -landX, landY);
   }
 
   if (!won) {
     translate(-(charX - width/2), -(charY - (height/2 + charSize)));
+  } else {
+    translate(-(-800 - width/2), -(10000 + charSize));
   }
-  
-  if(charX <-700 && charY<-10000){
+
+  if (charX <-700 && charY<-10000) {
     won=true;
   }
-  if(won){
+  if (won) {
     winScreen();
-
   }
 
   textureMode(IMAGE);
@@ -54,25 +59,23 @@ void gameScreen() {
   character();
   if (!won) {
     keyControl();
-   if(charX < -wallsPos + 202){
-     charX = -wallsPos + 202;
-   } 
-   if(charX > wallsPos - 2){
-     charX = wallsPos - charSize - 2;
-   }
-  
-
-  if (charY < -height * 1.1) {
-    aboveSky = true;
-  } else {
-    aboveSky = false;
-  }
+    if (charX < -wallsPos + 202) {
+      charX = -wallsPos + 202;
+    } 
+    if (charX > wallsPos - 2) {
+      charX = wallsPos - charSize - 2;
+    }
 
 
+    if (charY < -height * 1.1) {
+      aboveSky = true;
+    } else {
+      aboveSky = false;
+    }
   }
   jumpFall();
   platandhaz();
-  
+
   fill(255, 135, 0);
   textFont(startFont);
   textAlign(BOTTOM, LEFT);
@@ -90,8 +93,6 @@ void gameScreen() {
   rect(-1475, -6880, 350, 80, 15);
   fill(0);
   text("Remember right and left keys!", -1300, -6850);
-  
-  
 }
 
 void gameSettings() {
@@ -106,8 +107,7 @@ void gameSettings() {
 
   landscape =loadImage("landscape.png");
   landscape.resize(width, floor(height * 1.3));
-  
+
   helpFont = createFont("helpFont.vlw", 52);
   helpFontsml = createFont("helpFont.vlw", 24);
-   
 }
