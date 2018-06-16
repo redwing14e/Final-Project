@@ -150,8 +150,9 @@ void platandhaz() {
 
 
   //walls
-  plat(-wallsPos, -10000, 200, 10000);
-  plat(wallsPos, -10000, 200, 10000);
+  plat(-wallsPos, -10075, 200, 10075);
+  plat(-wallsPos + 10, -10100, 180,  25);
+  plat(wallsPos, -10075, 200, 10075);
 }
 
 void platSettings() {
