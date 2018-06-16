@@ -7,6 +7,9 @@ PFont helpFont;
 PFont helpFontsml;
 boolean aboveSky;
 boolean won = false;
+float screenX = 1;
+float screenY = 1;
+
 
 
 void gameScreen() { 
@@ -25,13 +28,14 @@ void gameScreen() {
     }
     image(landscape, -landX, landY);
   }
-
+  
   if (!won) {
-    translate(-(charX - width/2), -(charY - (height/2 + charSize)));
-  } else {
-    translate(-(-800 - width/2), -(10000 + charSize));
+     screenX = -(charX - width/2);
+      screenY = -(charY - (height/2 + charSize));
   }
-
+  
+  translate(screenX, screenY);
+  
   if (charX <-700 && charY<-10000) {
     won=true;
   }
