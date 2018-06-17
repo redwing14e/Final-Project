@@ -10,8 +10,6 @@ boolean won = false;
 float screenX = 1;
 float screenY = 1;
 
-
-
 void gameScreen() { 
   if (aboveSky) {
     image(sky, 0, 0);
@@ -36,9 +34,11 @@ void gameScreen() {
   
   translate(screenX, screenY);
   
-  if (charX <-700 && charY<-10000) {
+  if (charX <-700 && charY<-10100) {
     won=true;
   }
+  
+  
   if (won) {
     winScreen();
   }
@@ -114,4 +114,9 @@ void gameSettings() {
 
   helpFont = createFont("helpFont.vlw", 52);
   helpFontsml = createFont("helpFont.vlw", 24);
+  
+  //runs through array and creates new drop for everywhere in array
+  for ( int i = 0; i < drops.length; i++) {
+    drops[i] = new Drop();
+  }
 }
