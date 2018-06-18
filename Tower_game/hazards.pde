@@ -1,14 +1,17 @@
+//loads the images for verical and horizontal hazards
 PImage hazardImageV;
 PImage hazardImageH;
 
 void haz(float x, float y, float leg, float hi, boolean vert) {
+  //makes a varaiable for spikes
   PImage spikes;
-
+  
+  //gets settings ready for displaying the hazards
   noStroke();
   fill(255, 0, 0);
-  
   textureMode(IMAGE);
   textureWrap(REPEAT);
+  //displays the vertical spikes if it is set for vertical
   if (vert) {
     spikes = hazardImageV;
     beginShape(); 
@@ -18,6 +21,7 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
     vertex(x + leg, y + hi, 70, hi);
     vertex(x, y + hi, 0, hi);
     endShape();
+  //displays the horizontal spikes if the spikes are not set to be vertical
   } else {
     spikes = hazardImageH;
     beginShape(); 

@@ -73,11 +73,11 @@ void keyControl() {
       }
     }
   }
- /* if (keyPressed) {
+  if (keyPressed) {
     if (key == 'r' || key == 'R') {
       charX = -350;
       charY = -8550 - charHeight;
       jump = false;
     }
-  } */
+  } 
 }

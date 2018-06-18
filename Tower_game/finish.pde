@@ -16,13 +16,13 @@ void winScreen() {
   textAlign(CENTER, CENTER);
   text("CONGRATULATIONS", -900, -10300);
   charX-=xSpeed;
-  if (endCount>500) {
+  if (endCount>350) {
     won=false;
     startup=true;
     endCount=0;
     origin();
   }
-  println(endCount);
+
   endCount++;
 }
 

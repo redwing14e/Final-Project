@@ -1,7 +1,7 @@
+
 float a = 0;
 
 PFont deathFont;
-
 
 void ds() {
 

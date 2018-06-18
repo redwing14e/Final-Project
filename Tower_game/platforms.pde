@@ -1,6 +1,7 @@
 
-
+//creats function for plat forms
 void plat(float x, float y, float leg, float hi) {
+  //displays brick image repeadtly within space
   stroke(0);
   textureMode(IMAGE);
   textureWrap(REPEAT);
@@ -11,6 +12,7 @@ void plat(float x, float y, float leg, float hi) {
   vertex(x + leg, y + hi, leg, hi);
   vertex(x, y + hi, 0, hi);
   endShape();
+  
   //when the character is within the platform or just above do run anything that the platform would do to effect it
   if (charY > y - (charHeight + 1) && charY < y + hi) {
 
@@ -50,9 +52,11 @@ void plat(float x, float y, float leg, float hi) {
     }
   }
 }
+
+//variables for platyer controlled moving platforms and  compouter controlled
 float movePlat = 800;
 float comPlat = 800;
-
+//boolean for computer 
 Boolean platRight = true;
 void platandhaz() {
 
