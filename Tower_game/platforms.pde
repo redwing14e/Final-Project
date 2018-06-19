@@ -12,7 +12,7 @@ void plat(float x, float y, float leg, float hi) {
   vertex(x + leg, y + hi, leg, hi);
   vertex(x, y + hi, 0, hi);
   endShape();
-  
+
   //when the character is within the platform or just above do run anything that the platform would do to effect it
   if (charY > y - (charHeight + 1) && charY < y + hi) {
 
@@ -63,7 +63,7 @@ Boolean platRight = true;
 void platandhaz() {
   //ground
   plat(-groundLength/2, 0, groundLength, height/2);
-  
+
   //first few platforms and hazards
   plat(-700, -250, 200, 25);
   plat(200, -450, 200, 25);
@@ -71,7 +71,7 @@ void platandhaz() {
   plat(550, -700, 500, 25);
   haz(450, -500, 50, 80, true);
   plat(1125, -1000, 75, 25);
-  
+
 
   //keeps moving platform in tower
   if (movePlat < -wallsPos + 200) {
@@ -85,12 +85,12 @@ void platandhaz() {
   plat(1565, -1475, 20, 285);
   haz(0, -1390, 90, 90, true);
   plat(-1000, -1600, 200, 50);
-  
+
   //for loop of platforms for ladder effect
   for (int i = 0; i < 5; i++ ) {
     plat(-1000, -1600 - i * 400, 200, 25);
   }
-  
+
   //some more platforms and hazards
   plat(-600, - 3400, 400, 25);
   plat(0, -3600, 400, 25);
@@ -98,21 +98,21 @@ void platandhaz() {
   plat(800, -3800, 400, 25);
   haz(1015, -3875, 75, 75, true);
   plat(-1000, -4225, 2125, 25);
-  
+
   //changes the direction of the automated platforms when they hit the walls of the tower
   if (comPlat < -wallsPos + 201) {
     platRight = true;
   } else if (comPlat > wallsPos - 201) {
     platRight = false;
   }
-  
+
   //moves platform right if right is true and left if not
   if (platRight) {
     comPlat += 10;
   } else {
     comPlat -= 10;
   }
-  
+
   //two sets of ladder moving platforms 
   for (int i = 0; i < 4; i ++) {
     plat(comPlat, -4400 - i * 400, 200, 25);
@@ -120,17 +120,17 @@ void platandhaz() {
   for (int i = 0; i < 4; i ++) {
     plat(-comPlat, -4600 - i * 400, 200, 25);
   }
-  
+
   //more platforms
   plat(-400, -6200, 800, 50);
   plat(-1000, -6650, 200, 50);
   plat(movePlat, -6900, 200, 25);
-  
+
   ///for loop of hazards for extra difficulty
   for (int i = 0; i < 5; i ++) {
     haz( -700 + i * 300, -7000, 50, 100, true);
   }
-  
+
   //alot of platforms
   plat(800, -7350, 400, 25);
   plat(400, -7750, 200, 25);
@@ -149,19 +149,21 @@ void platandhaz() {
       }
     }
   }
-  
-  //more platforms for aesthetic of top of the tower
+
+  //more platforms for top of the tower
   plat(-wallsPos + 500, -10000, 1900, 125);
   plat(-wallsPos + 200, -10000, 50, 125);
 
+  //PLATFORM FOR LOOKING NICE 
+  plat(-wallsPos + 10, -10050, 180, 25);
+  
   //walls
   plat(-wallsPos, -10025, 200, 10025);
-  plat(-wallsPos + 10, -10050, 180,  25);
   plat(wallsPos, -10025, 200, 10025);
 }
- 
- 
- //loads platforms image of bricks
+
+
+//loads platforms image of bricks
 void platSettings() {
   platImage = loadImage("bricks.png");
   platImage.resize(200, 200);

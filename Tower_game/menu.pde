@@ -1,7 +1,9 @@
 //boolean for whether or not the back button has been pressed
 boolean backC = false;
-//counter for keeping the back screen stay on mementarly after being pressed
+
+//counter for keeping the back screen stay on after being pressed
 int backCount =0;
+
 void ms() {
   //loads font and aligns text
   textFont(startFont);

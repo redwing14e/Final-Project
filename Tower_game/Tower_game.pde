@@ -7,8 +7,7 @@ boolean win = false;
 
 void setup() {
   //controlled franmerate for unified play on all platforms
-  frameRate(30);
-  
+  frameRate(30);  
   //runs and loads all settings of all different parts of the game
   startupSettings();
   gameSettings();

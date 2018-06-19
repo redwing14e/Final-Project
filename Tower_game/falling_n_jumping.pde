@@ -20,7 +20,7 @@ void jumpFall() {
 
 //function for the character to go up in a jump
 void charJump() {
-  //onlyt gies of when not in a jump
+  //only gies of when not in a jump
   if (!jump) {
     ySpeed = -45;
     //sets jump to true so player can not jump within their jump

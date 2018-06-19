@@ -47,16 +47,16 @@ void keyReleased() {
 void keyControl() {
   //when a is pressed 
   if (keys[1]) {
-    //the boolean which picksto draw the image righ becomes false so the image is drwan left
-    right = false;
     if (!jump) {
       //runs character animation
       walkCount +=1;
     }
-    //and the character moves left
+    //the boolean which picksto draw the image righ becomes false so the image is drwan left
+    right = false;
+    //and the character moves leftAD
     charX -= xSpeed;
   } else if (keys[0]) {
-    //
+
     if (!jump) {
       //runs character animation
       walkCount +=1;
@@ -73,7 +73,7 @@ void keyControl() {
   } else if (keys[4]) {
     movePlat -= xSpeed;
   }
-  
+
   //when the character is not jumping  it sets the y speed to 0 and also checks if the w key is being used and makes the player jumo
   if (!jump) {
     ySpeed = 0;
@@ -82,7 +82,7 @@ void keyControl() {
     }
   }
 
-//special key puts the character at the top for testin purposes
+  //special key puts the character at the top for testin purposes
   if (keyPressed) {
     if (key == 'r' || key == 'R') {
       charX = -350;

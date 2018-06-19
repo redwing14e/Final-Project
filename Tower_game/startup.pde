@@ -33,7 +33,7 @@ void startUp() {
   if (mouseX>towerXpos && mouseX<towerXpos+ towerWid/3 && mouseY>towerYpos && mouseY<towerYpos+ towerHit) {
     //if the mouse is pressed change the tint to green and then makes the game start and the start screen stop
     if (mousePressed) {
-      tintC = color(0, 255, 0);
+      tintC = color(255, 0, 0);
       game= true;
       startup=false;
     } else {
@@ -42,7 +42,7 @@ void startUp() {
     }
   } else if (mouseX>towerXpos+ towerWid/3 && mouseX<towerXpos+ towerWid && mouseY>towerYpos+towerHit/4 && mouseY<towerYpos+ towerHit) {
     if (mousePressed) {
-      tintC = color(0, 255, 0);
+      tintC = color(255, 0, 0);
       game= true;
       startup=false;
     } else {

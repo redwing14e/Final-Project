@@ -86,7 +86,6 @@ void gameScreen() {
     if (charX > wallsPos - 2) {
       charX = wallsPos - charSize - 2;
     }
-
     // changes the abovesky variable depending on the character's height
     if (charY < -height * 1.1) {
       aboveSky = true;
@@ -94,6 +93,7 @@ void gameScreen() {
       aboveSky = false;
     }
   }
+  
   //runs the falling
   jumpFall();
   //runs all the platforms and hazards
