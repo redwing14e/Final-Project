@@ -33,7 +33,7 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
     endShape();
   }
 
-
+  //once the player is within the area of the hazard death screen plays and game screen stops playing
   if (charX > x - charSize && charX < x + leg && charY > y - charHeight && charY < y + hi) {   
     origin();
     death = true;
@@ -41,6 +41,7 @@ void haz(float x, float y, float leg, float hi, boolean vert) {
   }
 }
 
+//loads images for hazards
 void hazSettings(){
   hazardImageV = loadImage("spikesV.png");
   hazardImageV.resize(70, 70);

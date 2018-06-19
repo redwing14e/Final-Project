@@ -22,7 +22,7 @@ void setup() {
 } 
 
 void draw() {
-   //c\onditional so screens don't play at the same time
+   //conditional so screens don't play at the same time
   if (startup) {
     cursor();
     startUp();

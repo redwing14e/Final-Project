@@ -1,15 +1,22 @@
-
+//value for alpha of screen for fade in effect
 float a = 0;
 
+//font for death screen
 PFont deathFont;
 
 void ds() {
-
+  //loads in textfont and aligns
   textFont(deathFont);
   textAlign(CENTER, CENTER);
+  //fills background grey
   fill(50, a);
-  a += 3;
+  //increaes alpha value for fade in 
+  a += 2;
+  //draws rectangle that fills screen grey
+  noStroke();
   rect(0, 0, width, height);
+  
+  //if f is pressed game continues and death screen turns off
   if (keyPressed) {
     if (key == 'f' || key == 'F') {
       game=true;
@@ -17,11 +24,12 @@ void ds() {
       a=0;
     }
   }
+  //displays everything when the background has faded in enough
   if (a>=100) {
     fill(255);
     text("Press 'f' to Pay Respect", width/2, 3*height/4);
 
-    //draw settings for the smile
+    //draw settings for the sad face
     noFill();
     stroke(255);
     strokeWeight(30);
@@ -37,6 +45,8 @@ void ds() {
     strokeWeight(1);
   }
 }
+
+//loads font for death screen
 void deathSettings () {
   deathFont = createFont("Medusa Gothic.otf", 40);
 }

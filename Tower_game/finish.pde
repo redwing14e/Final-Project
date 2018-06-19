@@ -1,3 +1,4 @@
+//counter variable for how long the win screen stays
 int endCount;
 //creates array of drops
 Drop[] drops = new Drop[2000];
@@ -11,22 +12,27 @@ void winScreen() {
     drops[i].show();
   }
 
-  
+  //text to ongratualte player
   textFont(startFont);
   textAlign(CENTER, CENTER);
   text("CONGRATULATIONS", -900, -10300);
+  
+  //makes character run off screen
   charX-=xSpeed;
+  
+  //once the counter reaches a certain point startup becomes true
   if (endCount>350) {
     won=false;
     startup=true;
     endCount=0;
     origin();
   }
-
+  
+  //increases end counter
   endCount++;
 }
 
-
+//creates object for smile drops
 class Drop {
   //decclares and sets random variables for 
   float x = random(-2000, 100); 

@@ -1,12 +1,17 @@
+//boolean for whether or not the back button has been pressed
 boolean backC = false;
+//counter for keeping the back screen stay on mementarly after being pressed
 int backCount =0;
 void ms() {
+  //loads font and aligns text
   textFont(startFont);
   textAlign(LEFT, TOP);
+  //makes the boolean of the button to be true when the back button is pressed
   if (mousePressed && mouseX>width/10 && mouseY>height/10 && mouseX< 570 && mouseY< height/10 + height/13) {
     backC=true;
   }
-
+  
+  //when back button has not been pressed write the text normally and have the background normal
   if (!backC) {
     fill(150, 250, 255);
     rect(0, 0, width, height);
