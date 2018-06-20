@@ -16,6 +16,7 @@ void ds() {
   noStroke();
   rect(0, 0, width, height);
   
+  
   //if f is pressed game continues and death screen turns off
   if (keyPressed) {
     if (key == 'f' || key == 'F') {

@@ -165,6 +165,6 @@ void platandhaz() {
 
 //loads platforms image of bricks
 void platSettings() {
-  platImage = loadImage("bricks.png");
+  platImage = loadImage("bricks2.png");
   platImage.resize(200, 200);
 }
